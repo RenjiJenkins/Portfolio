@@ -400,6 +400,11 @@ a {
   transform: translateY(-2px);
 }
 
+.linkedin-btn:hover {
+  color: #0077b5;
+  border-color: rgba(0, 119, 181, 0.4);
+}
+
 .youtube-btn:hover {
   color: #ff4b4b;
   border-color: rgba(255, 75, 75, 0.3);
@@ -439,7 +444,7 @@ a {
   background: rgba(10, 14, 22, 0.95);
 }
 
-@media (max-width: 820px) {
+@media (max-width: 860px) {
   .nav-links, .download-nav-btn {
     display: none;
   }
@@ -629,7 +634,7 @@ a {
 }
 
 /* ==========================================================================
-   PROJECTS SECTION
+   PROJECTS SECTION & MODALS
    ========================================================================== */
 .project-filters {
   display: flex;
@@ -710,6 +715,7 @@ a {
 .status-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
 .status-warning { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
 .status-info { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+.status-danger { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
 
 .category-pill {
   font-size: 0.75rem;
@@ -736,6 +742,7 @@ a {
   color: var(--text-secondary);
   border: 1px solid var(--border-glass);
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .project-link-icon:hover {
@@ -744,6 +751,7 @@ a {
   transform: translateY(-2px);
 }
 
+.qr-link:hover { color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); }
 .yt-link:hover { color: #ef4444; border-color: rgba(239, 68, 68, 0.4); }
 .live-link:hover { color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); }
 
@@ -783,6 +791,95 @@ a {
   font-size: 0.8rem;
   font-family: var(--font-mono);
   color: #e2e8f0;
+}
+
+/* Modal Overlay & Card */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-card {
+  max-width: 480px;
+  width: 100%;
+  padding: 2.5rem;
+  text-align: center;
+  background: rgba(14, 19, 28, 0.95);
+  border: 1px solid var(--border-glass-hover);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: var(--text-primary);
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.modal-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.qr-code-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.qr-svg {
+  padding: 10px;
+  background: #090c10;
+  border-radius: 16px;
+  border: 1px solid var(--border-glass);
+}
+
+.qr-badge {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
 }
 
 /* ==========================================================================
@@ -1418,6 +1515,11 @@ a {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
   transform: translateY(-2px);
+}
+
+.linkedin-link:hover {
+  color: #0077b5;
+  border-color: rgba(0, 119, 181, 0.4);
 }
 
 .footer-icon-link.yt:hover {

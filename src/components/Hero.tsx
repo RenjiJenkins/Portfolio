@@ -49,7 +49,7 @@ export default function Hero() {
             <SparklesIcon className="icon-sm" />
             <span>Read Reflections</span>
           </Link>
-          <a href="/cv.pdf" className="btn btn-outline" download>
+          <a href="/cv.pdf" download="Renji_Jenkins_CV.pdf" className="btn btn-outline">
             <DownloadIcon className="icon-sm" />
             <span>Download CV</span>
           </a>
@@ -115,8 +115,8 @@ export default function Hero() {
               <SparklesIcon className="stat-icon" />
             </div>
             <div className="stat-info">
-              <div className="stat-value">4 Languages</div>
-              <div className="stat-label">FR, EN, ES, ID</div>
+              <div className="stat-value">C#, Python, React</div>
+              <div className="stat-label">C++, TypeScript, Java & ML</div>
             </div>
           </div>
         </div>

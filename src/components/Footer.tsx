@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { MailIcon, GithubIcon, YoutubeIcon, DownloadIcon, CopyIcon, CheckIcon, SparklesIcon } from './Icons';
+import { MailIcon, GithubIcon, YoutubeIcon, LinkedinIcon, DownloadIcon, CopyIcon, CheckIcon, SparklesIcon } from './Icons';
 
 export default function Footer() {
   const [copied, setCopied] = useState(false);
@@ -50,7 +50,7 @@ export default function Footer() {
                 </>
               )}
             </button>
-            <a href="/cv.pdf" className="btn btn-outline" download>
+            <a href="/cv.pdf" download="Renji_Jenkins_CV.pdf" className="btn btn-outline">
               <DownloadIcon className="icon-sm" />
               <span>Download Resume</span>
             </a>
@@ -80,13 +80,16 @@ export default function Footer() {
           </div>
 
           <div className="footer-links">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
+            <a href="https://www.linkedin.com/in/renjijenkins/" target="_blank" rel="noopener noreferrer" className="footer-icon-link linkedin-link" title="LinkedIn">
+              <LinkedinIcon className="icon-sm" />
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="footer-icon-link" title="GitHub">
               <GithubIcon className="icon-sm" />
             </a>
-            <a href="https://www.youtube.com/@mgfsdev" target="_blank" rel="noopener noreferrer" className="footer-icon-link yt">
+            <a href="https://www.youtube.com/@mgfsdev" target="_blank" rel="noopener noreferrer" className="footer-icon-link yt" title="YouTube">
               <YoutubeIcon className="icon-sm" />
             </a>
-            <a href={`mailto:${email}`} className="footer-icon-link">
+            <a href={`mailto:${email}`} className="footer-icon-link" title="Email">
               <MailIcon className="icon-sm" />
             </a>
           </div>

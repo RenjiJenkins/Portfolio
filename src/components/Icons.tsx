@@ -1,5 +1,13 @@
 import React from 'react';
 
+export const LinkedinIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
+
 export const GithubIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -78,5 +86,24 @@ export const CopyIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 export const CheckIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12"></polyline>
+  </svg>
+);
+
+export const QrCodeIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="7" height="7"></rect>
+    <rect x="14" y="3" width="7" height="7"></rect>
+    <rect x="3" y="14" width="7" height="7"></rect>
+    <path d="M14 14h3v3h-3z"></path>
+    <path d="M20 14v3h-3"></path>
+    <path d="M14 20h7"></path>
+  </svg>
+);
+
+export const VrIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-3.5a1.5 1.5 0 0 0-1.2.6l-1 1.3a.5.5 0 0 1-.8 0l-1-1.3a1.5 1.5 0 0 0-1.2-.6H6a3 3 0 0 1-3-3V8z"></path>
+    <circle cx="8" cy="12" r="2"></circle>
+    <circle cx="16" cy="12" r="2"></circle>
   </svg>
 );

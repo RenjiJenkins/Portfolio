@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { GithubIcon, YoutubeIcon, DownloadIcon, MailIcon } from './Icons';
+import { GithubIcon, YoutubeIcon, LinkedinIcon, DownloadIcon } from './Icons';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +28,15 @@ export default function Navbar() {
         {/* Action icons & buttons */}
         <div className="nav-actions">
           <a 
+            href="https://www.linkedin.com/in/renjijenkins/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="icon-btn linkedin-btn" 
+            title="LinkedIn (Renji Jenkins)"
+          >
+            <LinkedinIcon className="icon-svg" />
+          </a>
+          <a 
             href="https://github.com" 
             target="_blank" 
             rel="noopener noreferrer" 
@@ -47,6 +56,7 @@ export default function Navbar() {
           </a>
           <a 
             href="/cv.pdf" 
+            download="Renji_Jenkins_CV.pdf"
             className="btn btn-sm btn-primary download-nav-btn"
             title="Download Curriculum Vitae"
           >
@@ -76,7 +86,15 @@ export default function Navbar() {
           <a href="/#nas-lab" onClick={() => setIsOpen(false)}>NAS Lab</a>
           <Link href="/blog" onClick={() => setIsOpen(false)}>Reflections & Blog</Link>
           <a href="/#contact" onClick={() => setIsOpen(false)}>Contact</a>
-          <a href="/cv.pdf" className="btn btn-primary" onClick={() => setIsOpen(false)}>
+          <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', marginTop: '0.5rem' }}>
+            <a href="https://www.linkedin.com/in/renjijenkins/" target="_blank" rel="noopener noreferrer" className="icon-btn linkedin-btn">
+              <LinkedinIcon className="icon-sm" />
+            </a>
+            <a href="https://www.youtube.com/@mgfsdev" target="_blank" rel="noopener noreferrer" className="icon-btn youtube-btn">
+              <YoutubeIcon className="icon-sm" />
+            </a>
+          </div>
+          <a href="/cv.pdf" download="Renji_Jenkins_CV.pdf" className="btn btn-primary" onClick={() => setIsOpen(false)}>
             <DownloadIcon className="icon-sm" /> Download CV
           </a>
         </div>
